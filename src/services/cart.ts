@@ -15,7 +15,8 @@ export const postMemberCartAPI = (item: any) => {
     price: item.price,
     sku_name: item.sku_name_arr, // 传递整个数组，服务端可以处理
     stock: item.stock,
-	userId: item.userId // 添加userId到请求体
+	userId: item.userId, // 添加userId到请求体
+	selected: false
   }
   
   return http({
@@ -31,7 +32,7 @@ export const postMemberCartAPI = (item: any) => {
 export const getMemberCartAPI = () => {
 	return http<CartItem[]>({
 		method: 'GET',
-		url: '/user/cart',
+		url: '/user/cart/list',
 	})
 }
 
@@ -42,7 +43,7 @@ export const getMemberCartAPI = () => {
 export const deleteMemberCartAPI = (data : { ids : string[] }) => {
 	return http({
 		method: 'DELETE',
-		url: '/member/cart',
+		url: '/user/cart/delete',
 		data,
 	})
 }
@@ -58,7 +59,7 @@ export const putMemberCartBySkuIdAPI = (
 ) => {
 	return http({
 		method: 'PUT',
-		url: `/member/cart/${skuId}`,
+		url: `/user/cart/count/${skuId}`,
 		data,
 	})
 }
@@ -70,7 +71,7 @@ export const putMemberCartBySkuIdAPI = (
 export const putMemberCartSelectedAPI = (data : { selected : boolean }) => {
 	return http({
 		method: 'PUT',
-		url: '/member/cart/selected',
+		url: '/user/cart/allselected',
 		data,
 	})
 }

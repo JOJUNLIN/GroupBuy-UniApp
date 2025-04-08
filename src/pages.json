@@ -27,12 +27,6 @@
 				"navigationBarTitleText": "我的"
 			}
 		},
-		{
-			"path": "pages/cart/cart",
-			"style": {
-				"navigationBarTitleText": "购物车"
-			}
-		},
 		// {
 		// 	"path": "pages/category/category",
 		// 	"style": {
@@ -57,6 +51,20 @@
 			"style" : 
 			{
 				"navigationBarTitleText" : "商品详情"
+			}
+		},
+		{
+			"path" : "pages/cart/cart",
+			"style" : 
+			{
+				"navigationBarTitleText" : "tab购物车"
+			}
+		},
+		{
+			"path" : "pages/cart/cart2",
+			"style" : 
+			{
+				"navigationBarTitleText" : "可返回购物车"
 			}
 		}
 	],
