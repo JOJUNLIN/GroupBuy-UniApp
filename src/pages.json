@@ -40,31 +40,27 @@
 			}
 		},
 		{
-			"path" : "pages/hot/hot",
-			"style" : 
-			{
-				"navigationBarTitleText" : "热门推荐"
+			"path": "pages/hot/hot",
+			"style": {
+				"navigationBarTitleText": "热门推荐"
 			}
 		},
 		{
-			"path" : "pages/goods/goods",
-			"style" : 
-			{
-				"navigationBarTitleText" : "商品详情"
+			"path": "pages/goods/goods",
+			"style": {
+				"navigationBarTitleText": "商品详情"
 			}
 		},
 		{
-			"path" : "pages/cart/cart",
-			"style" : 
-			{
-				"navigationBarTitleText" : "tab购物车"
+			"path": "pages/cart/cart",
+			"style": {
+				"navigationBarTitleText": "tab购物车"
 			}
 		},
 		{
-			"path" : "pages/cart/cart2",
-			"style" : 
-			{
-				"navigationBarTitleText" : "可返回购物车"
+			"path": "pages/cart/cart2",
+			"style": {
+				"navigationBarTitleText": "可返回购物车"
 			}
 		}
 	],
@@ -107,28 +103,50 @@
 		]
 	},
 	// 分包加载规则
-	"subPackages": [
-		{
+	"subPackages": [{
 			// 子包的根目录
 			"root": "pagesMember",
 			// 页面路径和窗口表现
-			"pages": [
-				{
-					"path" : "settings/settings",
-					"style" : 
-					{
-						"navigationBarTitleText" : "设置"
+			"pages": [{
+					"path": "settings/settings",
+					"style": {
+						"navigationBarTitleText": "设置"
 					}
 				},
 				{
-					"path" : "profile/profile",
-					"style" : 
-					{
+					"path": "profile/profile",
+					"style": {
 						"navigationStyle": "custom",
 						"navigationBarTextStyle": "white",
-						"navigationBarTitleText" : "个人信息"
+						"navigationBarTitleText": "个人信息"
+					}
+				},
+				{
+					"path" : "address/address",
+					"style" : 
+					{
+						"navigationBarTitleText" : "地址"
 					}
 				}
+			]
+		},
+		{
+			"root": "pagesOrder",
+			"pages": [
+				{
+					"path": "create/create",
+					"style": {
+						"navigationBarTitleText": "填写订单"
+					}
+				},
+				{
+					"path" : "detail/detail",
+					"style" : 
+					{
+						"navigationBarTitleText" : "订单详情"
+					}
+				}
+
 			]
 		}
 	],

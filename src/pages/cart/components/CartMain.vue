@@ -33,7 +33,7 @@
 		cartList.value = res.result.map(item => {
 			return {
 				...item,
-				price: item.price / 100,  // 价格除以 100
+				price: (item.price / 100).toFixed(2),  // 价格除以 100
 				skuNameText: Array.isArray(item.skuName) ? item.skuName.join(' , ') : item.skuName  // 处理 skuName
 			}
 		})

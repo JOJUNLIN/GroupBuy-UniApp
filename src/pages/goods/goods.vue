@@ -139,9 +139,9 @@
 	const memberStore = useMemberStore()
 	
 	// 立即购买
-	// const onBuyNow = (ev : SkuPopupEvent) => {
-	// 	uni.navigateTo({ url: `/pagesOrder/create/create?skuId=${ev._id}&count=${ev.buy_num}` })
-	// }
+	const onBuyNow = (ev : SkuPopupEvent) => {
+		uni.navigateTo({ url: `/pagesOrder/create/create?skuId=${ev._id}&count=${ev.buy_num}` })
+	}
 </script>
 
 <template>
@@ -151,7 +151,7 @@
       color: '#27BA9B',
       borderColor: '#27BA9B',
       backgroundColor: '#E9F8F5',
-    }" @add-cart="onAddCart" />
+    }" @add-cart="onAddCart" @buy-now="onBuyNow" />
 	<scroll-view enable-back-to-top scroll-y class="viewport">
 		<!-- 基本信息 -->
 		<view class="goods">

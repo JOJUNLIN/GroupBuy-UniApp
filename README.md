@@ -1,11 +1,12 @@
+# 《拼团淘儿》团购微信小程序
+
 ## 更新中
 
-项目目前做到购物车
+项目目前做到订单管理的提交订单结束
 
 ## 项目简介
 
 拼团淘儿项目包含从首页浏览商品，商品详情，微信登录，加入购物车，提交订单，微信支付，订单管理等功能。
-
 
 ### 技术栈
 
@@ -13,23 +14,23 @@
 - 状态管理：[pinia](https://pinia.vuejs.org/zh/)
 - 组件库：[uni-ui](https://uniapp.dcloud.net.cn/component/uniui/uni-ui.html)
 
+### 开发工具
+
+- HbuilderX 、 微信开发者工具
+
 ## 资料说明
 
-### 📀 视频学习
+### 📀 参考学习视频
 
 [https://www.bilibili.com/video/BV1Bp4y1379L/](https://www.bilibili.com/video/BV1Bp4y1379L/?share_source=copy_web&vd_source=2ac50d29193927b3c8597537dc4bc81d)
 
-### 📗 接口文档
+### 📦 小程序项目源码（更新中）
 
-[https://www.apifox.cn/apidoc/shared-0e6ee326-d646-41bd-9214-29dbf47648fa/](https://www.apifox.cn/apidoc/shared-0e6ee326-d646-41bd-9214-29dbf47648fa/)
+[https://github.com/JOJUNLIN/GroupBuy-UniApp.git](https://github.com/JOJUNLIN/GroupBuy-UniApp.git)
 
-### ✏️ 在线笔记
+### 📦 后端SpringBoot项目源码（更新中）
 
-[https://megasu.atomgit.net/uni-app-shop-note/](https://megasu.atomgit.net/uni-app-shop-note/)
-
-### 📦 项目源码
-
-[https://gitee.com/Megasu/uniapp-shop-vue3-ts/](https://gitee.com/Megasu/uniapp-shop-vue3-ts/)
+[https://github.com/JOJUNLIN/GroupBuy-SpringBoot.git](https://github.com/JOJUNLIN/GroupBuy-SpringBoot.git)
 
 ## 运行程序
 
@@ -49,11 +50,6 @@ pnpm i --registry=https://registry.npmmirror.com
 # 微信小程序端
 npm run dev:mp-weixin
 
-# H5端
-npm run dev:h5
-
-# App端
-需 HbuilderX 工具，运行 - 运行到手机或模拟器
 ```
 
 3. 微信开发者工具导入 `/dist/dev/mp-weixin` 目录
