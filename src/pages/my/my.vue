@@ -8,7 +8,7 @@
 		{ type: '1', text: '待付款', icon: 'icon-currency' },
 		{ type: '2', text: '待发货', icon: 'icon-gift' },
 		{ type: '3', text: '待收货', icon: 'icon-check' },
-		{ type: '4', text: '待评价', icon: 'icon-comment' },
+		{ type: '4', text: '配送中', icon: 'icon-gift' }, // icon-comment
 	]
 	// 获取会员信息
 	const memberStore = useMemberStore()

@@ -8,7 +8,7 @@
 		<!-- logo文字 -->
 		<view class="logo">
 			<image class="logo-image" src="@/static/images/logo.png"></image>
-			<text class="logo-text">实惠 · 亲民 · 快捷</text>
+			<text class="logo-text">实惠 · 组团 · 方便</text>
 		</view>
 		<!-- 搜索条 -->
 		<view class="search">

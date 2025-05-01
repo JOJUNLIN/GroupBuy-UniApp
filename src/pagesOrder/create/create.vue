@@ -12,22 +12,6 @@
 
 	// 获取屏幕边界到安全区域距离
 	const { safeAreaInsets } = uni.getSystemInfoSync()
-	// // 订单备注
-	// const buyerMessage = ref('')
-	// // 配送时间
-	// const deliveryList = ref([
-	// 	{ type: 1, text: '时间不限 (周一至周日)' },
-	// 	{ type: 2, text: '工作日送 (周一至周五)' },
-	// 	{ type: 3, text: '周末配送 (周六至周日)' },
-	// ])
-	// // 当前配送时间下标
-	// const activeIndex = ref(0)
-	// // 当前配送时间
-	// const activeDelivery = computed(() => deliveryList.value[activeIndex.value])
-	// // 修改配送时间
-	// const onChangeDelivery : UniHelper.SelectorPickerOnChange = (ev) => {
-	// 	activeIndex.value = ev.detail.value
-	// }
 
 	// 页面参数
 	const query = defineProps<{
@@ -40,7 +24,7 @@
 	const orderPre = ref<OrderPreResult>()
 	const getMemberOrderPreData = async () => {
 		// 指定的 token
-		const specificToken = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ7XCJuYW1lXCI6XCLnlKjmiLc0NTY3ODlcIixcImlkXCI6XCIxNzU4NDY3NjU1OTQ3MjU5OTA1XCIsXCJ1c2VybmFtZVwiOlwi55So5oi3MTgxMjM0NTY3ODlcIn0iLCJpYXQiOjE3NDU3MjIyMjMsImV4cCI6MTc0NTk4MTQyM30._vJTqXAQK1LHa6-sCeaDvuGXxEDdv73anzxBBtIaBEs'
+		const specificToken = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ7XCJuYW1lXCI6XCLnlKjmiLc0NTY3ODlcIixcImlkXCI6XCIxNzU4NDY3NjU1OTQ3MjU5OTA1XCIsXCJ1c2VybmFtZVwiOlwi55So5oi3MTgxMjM0NTY3ODlcIn0iLCJpYXQiOjE3NDYwNjQ5NjgsImV4cCI6MTc0NjMyNDE2OH0.hBmdKloMbcyuDCsTApoXT8y2hQx4qF9O6k9Aqg1U_Rg'
 
 		if (query.count && query.skuId) {
 			const res = await getMemberOrderPreNowAPI(
@@ -60,6 +44,7 @@
 						goodsId: item.id,
 						goodsName: item.name,
 						image: item.picture,
+						// 将接收到的价格乘以100倍，以统一价格格式
 						price: (parseFloat(item.payPrice) * 100).toString(),
 						skuId: item.skuId,
 						totalPayPrice: item.totalPayPrice,
@@ -69,25 +54,25 @@
 			}
 
 			// 处理运费和总价
-			    if (res.result && res.result.summary) {
-			      // 记录原始运费
-			      const originalPostFee = res.result.summary.postFee 
-			      
-			      // 固定运费为 5 元
-			      res.result.summary.postFee = 5
-			      
-			      // 重新计算总支付金额
-			      // 1. 先计算商品总价（不含运费）
-			      const goodsTotal = res.result.goods.reduce((sum, item) => {
-			        return sum + parseFloat(item.totalPayPrice)
-			      }, 0)
-			      
-			      // 2. 加上新的运费，得到最终总价
-			      res.result.summary.totalPayPrice = goodsTotal + 5
-			      
-			      // 如果商品总价需要保持一致
-			      res.result.summary.totalPrice = goodsTotal
-			    }
+			if (res.result && res.result.summary) {
+				// 记录原始运费
+				const originalPostFee = res.result.summary.postFee
+
+				// 固定运费为 5 元
+				res.result.summary.postFee = 5
+
+				// 重新计算总支付金额
+				// 1. 先计算商品总价（不含运费）
+				const goodsTotal = res.result.goods.reduce((sum, item) => {
+					return sum + parseFloat(item.totalPayPrice)
+				}, 0)
+
+				// 2. 加上新的运费，得到最终总价
+				res.result.summary.totalPayPrice = goodsTotal + 5
+
+				// 如果商品总价需要保持一致
+				res.result.summary.totalPrice = goodsTotal
+			}
 
 			orderPre.value = res.result
 		} else {
@@ -121,7 +106,7 @@
 				goodsId: v.goodsId,
 				goodsName: v.goodsName,
 				image: v.image,
-				price: v.price,
+				price: v.price,  // 这边传过去的价格都是100倍数
 				skuId: v.skuId,
 				totalPayPrice: v.totalPayPrice,
 				totalPrice: v.totalPrice
@@ -164,20 +149,6 @@
 				</view>
 			</navigator>
 		</view>
-
-		<!-- 配送及支付方式 -->
-		<!-- <view class="related">
-			<view class="item">
-				<text class="text">配送时间</text>
-				<picker :range="deliveryList" range-key="text" @change="onChangeDelivery">
-					<view class="icon-fonts picker">{{ activeDelivery.text }}</view>
-				</picker>
-			</view>
-			<view class="item">
-				<text class="text">订单备注</text>
-				<input class="input" :cursor-spacing="30" placeholder="选题，建议留言前先与商家沟通确认" v-model="buyerMessage" />
-			</view>
-		</view> -->
 
 		<!-- 支付金额 -->
 		<view class="settlement">

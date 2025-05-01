@@ -27,12 +27,6 @@
 				"navigationBarTitleText": "我的"
 			}
 		},
-		// {
-		// 	"path": "pages/category/category",
-		// 	"style": {
-		// 		"navigationBarTitleText": "分类"
-		// 	}
-		// },
 		{
 			"path": "pages/login/login",
 			"style": {
@@ -82,12 +76,6 @@
 				"iconPath": "static/tabs/home_default.png",
 				"selectedIconPath": "static/tabs/home_selected.png"
 			},
-			// {
-			// 	"text": "分类",
-			// 	"pagePath": "pages/category/category",
-			// 	"iconPath": "static/tabs/category_default.png",
-			// 	"selectedIconPath": "static/tabs/category_selected.png"
-			// },
 			{
 				"text": "购物车",
 				"pagePath": "pages/cart/cart",
@@ -143,7 +131,22 @@
 					"path" : "detail/detail",
 					"style" : 
 					{
-						"navigationBarTitleText" : "订单详情"
+						"navigationBarTitleText" : "订单详情",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path" : "payment/payment",
+					"style" : 
+					{
+						"navigationBarTitleText" : "支付结果"
+					}
+				},
+				{
+					"path" : "list/list",
+					"style" : 
+					{
+						"navigationBarTitleText" : "订单列表"
 					}
 				}
 

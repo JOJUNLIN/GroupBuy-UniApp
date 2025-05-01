@@ -11,10 +11,6 @@
 
 	// 获取轮播图数据
 	const bannerList = ref<BannerItem[]>([])
-	// const getHomeBannerData = async () => {
-	// 	const res = await getHomeBannerAPI()
-	// 	bannerList.value = res.data
-	// }
 	const getHomeBannerData = async () => {
 		try {
 			const res = await getHomeBannerAPI()
@@ -63,10 +59,6 @@
 	const onRefresherrefresh = async () => {
 		// 开始动画
 		isTriggered.value = true
-		// 加载数据
-		// await getHomeBannerData()
-		// await getHomeCategoryData()
-		// await getHomeHotData()
 		// 重置猜你喜欢组件数据
 		guessRef.value?.resetData()
 		await Promise.all([
@@ -93,6 +85,7 @@
 		class="scroll-view" 
 		scroll-y
 	>
+		<!-- 骨架屏 -->
 		<PageSkeleton v-if="isLoading" />
 		<template v-else>
 			<!-- 自定义轮播图 -->

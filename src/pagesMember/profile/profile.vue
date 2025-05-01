@@ -2,7 +2,6 @@
 	import { getMemberProfileAPI, putMemberProfileAPI } from '@/services/profile'
 	import { useMemberStore } from '@/stores'
 	import type { Gender, ProfileDetail } from '@/types/member.d'
-	// import { formatDate } from '@/utils'
 	import { onLoad } from '@dcloudio/uni-app'
 	import { ref } from 'vue'
 
@@ -25,61 +24,6 @@
 
 	//会员信息对象
 	const memberStore = useMemberStore()
-	// 修改头像
-	// const onAvatarChange = () => {
-	// 	// 调用拍照/选择图片
-	// 	// 选择图片条件编译
-	// 	// #ifdef H5 || APP-PLUS
-	// 	// 微信小程序从基础库 2.21.0 开始， wx.chooseImage 停止维护，请使用 uni.chooseMedia 代替
-	// 	uni.chooseImage({
-	// 		count: 1,
-	// 		success: (res) => {
-	// 			// 文件路径
-	// 			const tempFilePaths = res.tempFilePaths
-	// 			// 上传
-	// 			uploadFile(tempFilePaths[0])
-	// 		},
-	// 	})
-	// 	// #endif
-
-	// 	// #ifdef MP-WEIXIN
-	// 	// uni.chooseMedia 仅支持微信小程序端
-	// 	uni.chooseMedia({
-	// 		// 文件个数
-	// 		count: 1,
-	// 		// 文件类型
-	// 		mediaType: ['image'],
-	// 		success: (res) => {
-	// 			// 本地路径
-	// 			const { tempFilePath } = res.tempFiles[0]
-	// 			// 上传
-	// 			uploadFile(tempFilePath)
-	// 		},
-	// 	})
-	// 	// #endif
-	// }
-
-	// 文件上传-兼容小程序端、H5端、App端
-	// const uploadFile = (file : string) => {
-	// 	// 文件上传
-	// 	uni.uploadFile({
-	// 		url: '/member/profile/avatar',
-	// 		name: 'file',
-	// 		filePath: file,
-	// 		success: (res) => {
-	// 			if (res.statusCode === 200) {
-	// 				const avatar = JSON.parse(res.data).result.avatar
-	// 				// 个人信息页数据更新
-	// 				profile.value!.avatar = avatar
-	// 				// Store头像更新
-	// 				memberStore.profile!.avatar = avatar
-	// 				uni.showToast({ icon: 'success', title: '更新成功' })
-	// 			} else {
-	// 				uni.showToast({ icon: 'error', title: '出现错误' })
-	// 			}
-	// 		},
-	// 	})
-	// }
 
 	// 修改性别
 	const onGenderChange : UniHelper.RadioGroupOnChange = (ev) => {
@@ -151,29 +95,6 @@
 						</label>
 					</radio-group>
 				</view>
-				<!-- <view class="form-item">
-					<text class="label">生日</text>
-					<picker @change="onBirthdayChange" mode="date" class="picker" :value="profile?.birthday"
-						start="1900-01-01" :end="formatDate(new Date())">
-						<view v-if="profile?.birthday">{{ profile?.birthday }}</view>
-						<view class="placeholder" v-else>请选择日期</view>
-					</picker>
-				</view> -->
-				<!-- 只有微信小程序端内置了省市区数据 -->
-				<!-- #ifdef MP-WEIXIN -->
-				<!-- <view class="form-item">
-					<text class="label">城市</text>
-					<picker @change="onFullLocationChange" mode="region" class="picker"
-						:value="profile?.fullLocation?.split(' ')">
-						<view v-if="profile?.fullLocation">{{ profile.fullLocation }}</view>
-						<view class="placeholder" v-else>请选择城市</view>
-					</picker>
-				</view> -->
-				<!-- #endif -->
-				<!-- <view class="form-item">
-					<text class="label">职业</text>
-					<input class="input" type="text" placeholder="请填写职业" :value="profile?.profession" />
-				</view> -->
 			</view>
 			<!-- 提交按钮 -->
 			<button @tap="onSubmit" class="form-button">保 存</button>

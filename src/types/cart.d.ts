@@ -22,6 +22,4 @@ export type CartItem = {
 	selected : boolean
 	/** 属性文字 */
 	skuName : string
-	/** 是否为有效商品 */
-	// isEffective: boolean
 }

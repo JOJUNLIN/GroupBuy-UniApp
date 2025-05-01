@@ -1,9 +1,5 @@
 # 《拼团淘儿》团购微信小程序
 
-## 更新中
-
-项目目前做到订单管理的提交订单结束
-
 ## 项目简介
 
 拼团淘儿项目包含从首页浏览商品，商品详情，微信登录，加入购物车，提交订单，微信支付，订单管理等功能。
@@ -65,10 +61,20 @@ npm run dev:mp-weixin
 │   ├── composables            # 组合式函数
 │   ├── pages                  # 主包页面
 │       ├── index               # 首页
-│       ├── category            # 分类页
 │       ├── cart                # 购物车
+│       ├── goods               # 商品详情
 │       ├── my                  # 我的
 │       └── login               # 登录页
+│       └── hot                 # 热门推荐
+│   ├── pagesMember            # 分包页面(用户模块)
+│       ├── address             # 地址管理
+│       ├── profile             # 用户信息
+│       └── settings            # 用户设置
+│   ├── pagesOrder             # 分包页面(订单模块)
+│       ├── create              # 创建订单
+│       ├── detail              # 订单详情
+│       ├── list                # 订单列表
+│       └── payment             # 支付结果
 │   ├── services               # 所有请求
 │   ├── static                 # 存放应用引用的本地静态资源的目录
 │       ├── images              # 普通图片
@@ -78,7 +84,7 @@ npm run dev:mp-weixin
 │       └── index.ts            # store 入口
 │   ├── styles                 # 全局样式
 │       └── fonts.scss          # 字体图标
-│   ├── types                  # 类型声明文件
+│   ├── types                  # 所有类型声明文件
 │       └── component.d.ts      # 全局组件类型声明
 │   ├── utils                  # 全局方法
 │   ├── App.vue                # 入口页面
