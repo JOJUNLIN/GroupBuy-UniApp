@@ -20,7 +20,7 @@
 
 [https://www.bilibili.com/video/BV1Bp4y1379L/](https://www.bilibili.com/video/BV1Bp4y1379L/?share_source=copy_web&vd_source=2ac50d29193927b3c8597537dc4bc81d)
 
-### 📦 小程序项目源码（更新中）
+### 📦 小程序项目源码（已完结）
 
 [https://github.com/JOJUNLIN/GroupBuy-UniApp.git](https://github.com/JOJUNLIN/GroupBuy-UniApp.git)
 
