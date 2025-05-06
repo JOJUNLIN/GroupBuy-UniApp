@@ -24,7 +24,7 @@
 	const orderPre = ref<OrderPreResult>()
 	const getMemberOrderPreData = async () => {
 		// 指定的 token
-		const specificToken = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ7XCJuYW1lXCI6XCLnlKjmiLc0NTY3ODlcIixcImlkXCI6XCIxNzU4NDY3NjU1OTQ3MjU5OTA1XCIsXCJ1c2VybmFtZVwiOlwi55So5oi3MTgxMjM0NTY3ODlcIn0iLCJpYXQiOjE3NDYwNjQ5NjgsImV4cCI6MTc0NjMyNDE2OH0.hBmdKloMbcyuDCsTApoXT8y2hQx4qF9O6k9Aqg1U_Rg'
+		const specificToken = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ7XCJuYW1lXCI6XCLnlKjmiLc0NTY3ODlcIixcImlkXCI6XCIxNzU4NDY3NjU1OTQ3MjU5OTA1XCIsXCJ1c2VybmFtZVwiOlwi55So5oi3MTgxMjM0NTY3ODlcIn0iLCJpYXQiOjE3NDY1NDA1NzUsImV4cCI6MTc0Njc5OTc3NX0.VcNMZMvdoCmzF8RxsZECjoZPkvUeX72qorx9wiCMQuk'
 
 		if (query.count && query.skuId) {
 			const res = await getMemberOrderPreNowAPI(

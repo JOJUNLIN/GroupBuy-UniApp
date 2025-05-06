@@ -26,12 +26,12 @@ const emit = defineEmits<{
           退款将原路返回，不同银行处理时间不同，预计1-5个工作日到账
         </view>
       </view>
-      <view class="item">
+      <!-- <view class="item">
         <view class="dt">满88元免邮费</view>
         <view class="dd">
           单笔订单金额(不含运费)满88元可免邮费，不满88元， 单笔订单收取10元邮费
         </view>
-      </view>
+      </view> -->
     </view>
   </view>
 </template>

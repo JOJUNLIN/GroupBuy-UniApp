@@ -189,13 +189,13 @@
 					<text class="label">选择</text>
 					<text class="text ellipsis"> 请选择商品规格 </text>
 				</view> -->
-				<view @tap="openPopup('address')" class="item arrow">
+				<!-- <view @tap="openPopup('address')" class="item arrow">
 					<text class="label">送至</text>
 					<text class="text ellipsis"> 请选择拼团站点 </text>
-				</view>
+				</view> -->
 				<view @tap="openPopup('service')" class="item arrow">
 					<text class="label">服务</text>
-					<text class="text ellipsis"> 无忧退 快速退款 免费包邮 </text>
+					<text class="text ellipsis"> 无忧退 快速退款 </text>
 				</view>
 			</view>
 		</view>

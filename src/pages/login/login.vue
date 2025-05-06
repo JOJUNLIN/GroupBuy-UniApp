@@ -15,7 +15,7 @@
 
 	// 模拟手机号码快捷登录（个人开发）
 	const onGetphonenumberSimple = async () => {
-		const res = await postLoginWxMinSimpleAPI('18123456789')
+		const res = await postLoginWxMinSimpleAPI('12123456789')
 		loginSuccess(res.result)
 	}
 	// #endif
