@@ -28,6 +28,10 @@
 
 [https://github.com/JOJUNLIN/GroupBuy-SpringBoot.git](https://github.com/JOJUNLIN/GroupBuy-SpringBoot.git)
 
+### 📦 web端Vue3项目源码（更新中）
+
+[https://github.com/JOJUNLIN/GroupBuy-Vue.git](https://github.com/JOJUNLIN/GroupBuy-Vue.git)
+
 ## 运行程序
 
 1. 安装依赖
