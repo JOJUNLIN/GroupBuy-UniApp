@@ -20,15 +20,15 @@
 
 [https://www.bilibili.com/video/BV1Bp4y1379L/](https://www.bilibili.com/video/BV1Bp4y1379L/?share_source=copy_web&vd_source=2ac50d29193927b3c8597537dc4bc81d)
 
-### 📦 小程序项目源码（已完结）
+### 📦 小程序项目源码
 
 [https://github.com/JOJUNLIN/GroupBuy-UniApp.git](https://github.com/JOJUNLIN/GroupBuy-UniApp.git)
 
-### 📦 后端SpringBoot项目源码（更新中）
+### 📦 后端SpringBoot项目源码
 
 [https://github.com/JOJUNLIN/GroupBuy-SpringBoot.git](https://github.com/JOJUNLIN/GroupBuy-SpringBoot.git)
 
-### 📦 web端Vue3项目源码（更新中）
+### 📦 web端Vue项目源码
 
 [https://github.com/JOJUNLIN/GroupBuy-Vue.git](https://github.com/JOJUNLIN/GroupBuy-Vue.git)
 

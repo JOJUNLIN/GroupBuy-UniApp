@@ -48,13 +48,13 @@
 		{
 			"path": "pages/cart/cart",
 			"style": {
-				"navigationBarTitleText": "tab购物车"
+				"navigationBarTitleText": "购物车"
 			}
 		},
 		{
 			"path": "pages/cart/cart2",
 			"style": {
-				"navigationBarTitleText": "可返回购物车"
+				"navigationBarTitleText": "购物车"
 			}
 		}
 	],

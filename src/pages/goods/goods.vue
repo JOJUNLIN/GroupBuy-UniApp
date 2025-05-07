@@ -172,8 +172,9 @@
 			<!-- 商品简介 -->
 			<view class="meta">
 				<view class="price">
-					<text class="symbol">¥</text>
+					<text class="symbol">团购¥</text>
 					<text class="number">{{ goods?.price }}</text>
+					<text class="before">	优惠前¥{{ (goods?.price * 1.1).toFixed(2) }}</text>
 				</view>
 				<view class="name ellipsis">{{ goods?.name }}</view>
 				<view class="desc"> {{ goods?.desc }} </view>
@@ -185,17 +186,9 @@
 					<text class="label">选择</text>
 					<text class="text ellipsis"> {{ selectArrText }} </text>
 				</view>
-				<!-- <view class="item arrow">
-					<text class="label">选择</text>
-					<text class="text ellipsis"> 请选择商品规格 </text>
-				</view> -->
-				<!-- <view @tap="openPopup('address')" class="item arrow">
-					<text class="label">送至</text>
-					<text class="text ellipsis"> 请选择拼团站点 </text>
-				</view> -->
 				<view @tap="openPopup('service')" class="item arrow">
 					<text class="label">服务</text>
-					<text class="text ellipsis"> 无忧退 快速退款 </text>
+					<text class="text ellipsis"> 无忧退 快速退款 团购优惠 </text>
 				</view>
 			</view>
 		</view>
@@ -219,10 +212,10 @@
 			</view>
 		</view>
 
-		<!-- 同类推荐 -->
+		<!-- 好物推荐 -->
 		<view class="similar panel">
 			<view class="title">
-				<text>同类推荐</text>
+				<text>好物推荐</text>
 			</view>
 			<view class="content">
 				<navigator v-for="item in goods?.similarProducts" :key="item.id" class="goods" hover-class="none"
@@ -254,8 +247,6 @@
 		<view class="buttons">
 			<view @tap="openSkuPopup(SkuMode.Cart)" class="addcart"> 加入购物车 </view>
 			<view @tap="openSkuPopup(SkuMode.Buy)" class="payment"> 立即拼团 </view>
-			<!-- <view class="addcart"> 加入购物车 </view>
-			<view class="payment"> 立即拼团 </view> -->
 		</view>
 	</view>
 
@@ -372,8 +363,17 @@
 				background-color: #35c8a9;
 			}
 
+			.symbol {
+				font-size: 30rpx;
+			}
+
 			.number {
 				font-size: 56rpx;
+			}
+			
+			.before {
+				font-size: 30rpx;
+				color: #ebebeb;
 			}
 
 			.brand {
